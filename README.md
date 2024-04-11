@@ -1,6 +1,6 @@
 # Ryan's Gemini Clone
 
-![Gemini Logo - Wikipedia](./src/assets/readme/geminiLogoReadMe.png)
+![Gemini Logo - Wikipedia](./gemini-clone/src/assets/readme/geminiLogoReadMe.png)
 
 Welcome to the frontier of Artificial Intelligence (AI)! In today's rapidly evolving technological landscape, AI stands out as a transformative force that promises to reshape countless industries and aspects of our lives. This remarkable technology has captured the imagination of innovators worldwide, and I am thrilled to join the ranks with my own AI-powered project. Inspired by the cutting-edge advancements in AI, I embarked on a journey to develop a project that leverages the power of Google's API for Gemini. With the guidance of the esteemed GreatStack, I meticulously crafted a working clone that showcases the immense potential of AI. As you delve into this project, I invite you to share your thoughts and experiences. What AI-related endeavors have captured your interest? Reach out to me through the contact section below and let's engage in a vibrant discussion on the future of AI.
 
@@ -8,7 +8,7 @@ Welcome to the frontier of Artificial Intelligence (AI)! In today's rapidly evol
 
 ## Screenshots
 
-![screenshotReadMe](./src//assets/readme/geminiReadMeMain.png)
+![screenshotReadMe](./gemini-clone/src/assets/readme/geminiReadMeMain.png)
 
 <details>
 
@@ -16,19 +16,19 @@ Welcome to the frontier of Artificial Intelligence (AI)! In today's rapidly evol
 
 The Main Page:
 
-![screenshotMain](./src/assets/readme/geminiMain.png)
+![screenshotMain](./gemini-clone/src/assets/readme/geminiMain.png)
 
 Mobile View
 
-![screenshotMain](./src/assets/readme/geminiMainMobile.png)
+![screenshotMain](./gemini-clone/src/assets/readme/geminiMainMobile.png)
 
 Answering a Prompt:
 
-![screenshotMain](./src/assets/readme/geminiAnswer.png)
+![screenshotMain](./gemini-clone/src/assets/readme/geminiAnswer.png)
 
 Sidebar displaying Previous Prompts:
 
-![screenshotMain](./src/assets/readme/geminiAnswerSidebar.png)
+![screenshotMain](./gemini-clone/src/assets/readme/geminiAnswerSidebar.png)
 
 </details>
 
@@ -52,7 +52,7 @@ Sidebar displaying Previous Prompts:
 
 Use my Contact Page on My Portfolio here:
 
-[![screenshotMain](./src/assets/readme/8bit-smallContact.png)](https://ryanfann.netlify.app/)
+[![screenshotMain](./gemini-clone/src/assets/readme/8bit-smallContact.png)](https://ryanfann.netlify.app/)
 
 _or_
 
@@ -66,4 +66,4 @@ _or_
 
 ---
 
-powered by: ![geminiLogo](./src/assets/readme/poweredLogo.png)
+powered by: ![geminiLogo](./gemini-clone/src/assets/readme/poweredLogo.png)
