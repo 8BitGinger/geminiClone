@@ -182,3 +182,36 @@
   font-weight: 300;
   line-height: 1.8;
 }
+
+@media screen and (max-width: 600px) {
+  .main-bottom input {
+    flex: none;
+    width: 150px;
+  }
+
+  .main-bottom img {
+    width: 20px;
+  }
+
+  .main-bottom {
+    margin-bottom: 10px;
+  }
+
+  .search-box {
+    padding: 5px 10px;
+  }
+
+  .search-box div {
+    gap: 5px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+
+  .greet p {
+    font-size: 40px;
+  }
+}

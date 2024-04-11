@@ -6,7 +6,7 @@ export const Context = createContext();
 const ContextProvider = (props) => {
   const [input, setInput] = useState('');
   const [recentPrompt, setRecentPrompt] = useState('');
-  const [prevPrompts, setPrevPrompts] = useState('');
+  const [prevPrompts, setPrevPrompts] = useState([]);
   const [showResult, setShowResult] = useState(false);
   const [loading, setLoading] = useState(false);
   const [resultsData, setResultsData] = useState('');
@@ -15,6 +15,11 @@ const ContextProvider = (props) => {
     setTimeout(function () {
       setResultsData((prev) => prev + nextWord);
     }, 75 * index);
+  };
+
+  const newChat = () => {
+    setLoading(false);
+    setShowResult(false);
   };
 
   const onSent = async (prompt) => {
@@ -65,7 +70,7 @@ const ContextProvider = (props) => {
     resultsData,
     setResultsData,
     onSent,
-    // newChat,
+    newChat,
   };
 
   return (

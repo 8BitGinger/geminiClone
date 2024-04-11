@@ -33,6 +33,7 @@
 .sidebar .recent {
   display: flex;
   flex-direction: column;
+  animation: fadeIn 1.5s;
 }
 
 .sidebar .recent-title {
@@ -68,4 +69,10 @@
 
 .sidebar .new-chat {
   margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
 }
