@@ -52,7 +52,7 @@ async function runChat(prompt) {
 
     return response.text();
   } catch (error) {
-    console.error('Error generating content:', error);
+    console.error('Error generating the content:', error);
     // You might want to handle the error more gracefully in your UI
     return 'Error: Could not get a response from the AI model.';
   }
