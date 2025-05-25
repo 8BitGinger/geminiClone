@@ -7,7 +7,7 @@ import {
   HarmBlockThreshold,
 } from '@google/generative-ai';
 
-const MODEL_NAME = 'gemini-1.0-pro';
+const MODEL_NAME = 'gemini-1.5-flash'; // Changed to gemini-1.5-flash
 const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
 async function runChat(prompt) {
@@ -40,16 +40,22 @@ async function runChat(prompt) {
     },
   ];
 
-  const chat = model.startChat({
-    generationConfig,
-    safetySettings,
-    history: [],
-  });
+  try {
+    const result = await model.generateContent({
+      contents: [{ role: 'user', parts: [{ text: prompt }] }],
+      generationConfig,
+      safetySettings,
+    });
 
-  const result = await chat.sendMessage(prompt);
-  const response = result.response;
-  console.log(response.text());
-  return response.text();
+    const response = result.response;
+    console.log(response.text());
+
+    return response.text();
+  } catch (error) {
+    console.error('Error generating content:', error);
+    // You might want to handle the error more gracefully in your UI
+    return 'Error: Could not get a response from the AI model.';
+  }
 }
 
 export default runChat;
