@@ -38,7 +38,7 @@ Sidebar displaying Previous Prompts:
 
 [Deployed Site](https://gemini-ryan.netlify.app/)
 
-[My Portfolio](https://ryanfann.netlify.app/)
+[My Portfolio](https://8bitginger.com/)
 
 ---
 
