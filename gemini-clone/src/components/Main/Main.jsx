@@ -17,7 +17,7 @@ const Main = () => {
   return (
     <div className="main">
       <div className="nav">
-        <p>Ryan&apos;s Gemini</p>
+        <p>8BitGinger&apos;s Gemini</p>
         <img src={assets.user_icon} alt="user icon" />
       </div>
       <div className="main-container">
@@ -25,7 +25,7 @@ const Main = () => {
           <>
             <div className="greet">
               <p>
-                <span>Hello, Ryan.</span>
+                <span>Hello, 8Bit.</span>
               </p>
               <p>How can I help you today?</p>
             </div>

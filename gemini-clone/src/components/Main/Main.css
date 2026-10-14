@@ -11,7 +11,7 @@
   justify-content: space-between;
   font-size: 22px;
   padding: 20px;
-  color: #585858;
+  color: var(--text-muted);
 }
 
 .main .nav img {
@@ -27,7 +27,7 @@
 .main .greet {
   margin: 50px 0px;
   font-size: 56px;
-  color: #c4c7c5;
+  color: var(--text-greet);
   font-weight: 500;
   padding: 20px;
 }
@@ -47,7 +47,7 @@
 }
 
 .main .card {
-  background-color: #f0f4f9;
+  background-color: var(--surface);
   padding: 15px;
   height: 200px;
   border-radius: 10px;
@@ -67,12 +67,12 @@
 }
 
 .main .card p {
-  color: #585858;
+  color: var(--text-muted);
   font-size: 17px;
 }
 
 .main .card:hover {
-  background-color: #dfe4ea;
+  background-color: var(--surface-hover);
 }
 
 .main-bottom {
@@ -90,17 +90,19 @@
   justify-content: space-between;
   gap: 20px;
   padding: 10px 20px;
-  background: #f0f4f9;
+  background: var(--surface);
   border-radius: 50px;
 }
 
 .search-box img {
   width: 24px;
+  filter: var(--icon-filter);
   cursor: pointer;
 }
 
 .search-box input {
   flex: 1;
+  color: var(--text);
   background: transparent;
   border: none;
   outline: none;
@@ -162,7 +164,7 @@
   border-radius: 4px;
   border: none;
   background-color: #f6f7f8;
-  background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+  background: linear-gradient(to right, #9ed7ff, var(--loader-mid), #9ed7ff);
   background-size: 800px 50px;
   height: 20px;
   animation: loader 3s infinite linear;

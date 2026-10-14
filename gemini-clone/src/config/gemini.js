@@ -7,7 +7,9 @@ import {
   HarmBlockThreshold,
 } from '@google/generative-ai';
 
-const MODEL_NAME = 'gemini-2.5-flash'; // Changed to gemini-2.5-flash
+const MODEL_NAME = 'gemini-3.8-flash';
+export const HIGH_DEMAND_MESSAGE =
+  'Gemini is experiencing high demand, try again later (Free Tier Problems 🤷).';
 const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
 async function runChat(prompt) {
@@ -53,8 +55,10 @@ async function runChat(prompt) {
     return response.text();
   } catch (error) {
     console.error('Error generating the content:', error);
-    // You might want to handle the error more gracefully in your UI
-    return 'Error: Could not get a response from the AI model.';
+    if (error.status === 503 || error.status === 429) {
+      throw new Error(HIGH_DEMAND_MESSAGE);
+    }
+    throw new Error('Error: Could not get a response from the AI model.');
   }
 }
 

@@ -5,12 +5,7 @@ import { Context } from '../../context/Context';
 
 const Sidebar = () => {
   const [extended, setExtended] = useState(false);
-  const { onSent, prevPrompts, setRecentPrompt, newChat } = useContext(Context);
-
-  const loadPrompt = async (prompt) => {
-    setRecentPrompt(prompt);
-    await onSent(prompt);
-  };
+  const { chats, loadChat, newChat, theme, toggleTheme } = useContext(Context);
 
   return (
     <div className="sidebar">
@@ -32,15 +27,15 @@ const Sidebar = () => {
         {extended ? (
           <div className="recent">
             <p className="recent-title">Recent</p>
-            {prevPrompts.map((item, index) => {
+            {chats.map((chat) => {
               return (
                 <div
-                  key={index}
-                  onClick={() => loadPrompt(item)}
+                  key={chat.prompt}
+                  onClick={() => loadChat(chat)}
                   className="recent-entry"
                 >
                   <img src={assets.message_icon} alt="message icon" />
-                  <p>{item.slice(0, 18)} ...</p>
+                  <p>{chat.prompt.slice(0, 18)} ...</p>
                 </div>
               );
             })}
@@ -56,9 +51,11 @@ const Sidebar = () => {
           <img src={assets.history_icon} alt="history icon" />
           {extended ? <p>Activity</p> : null}
         </div>
-        <div className="bottom-item recent-entry">
+        <div className="bottom-item recent-entry" onClick={toggleTheme}>
           <img src={assets.setting_icon} alt="setting icon" />
-          {extended ? <p>Settings</p> : null}
+          {extended ? (
+            <p>{theme === 'dark' ? 'Light mode' : 'Dark mode'}</p>
+          ) : null}
         </div>
       </div>
     </div>
